@@ -1,6 +1,6 @@
 h1 a, h2 a {
-    color: #4682B4;
-    font-family: 'Abel';
+    color: #ffffff;
+    font-family: 'Abel', sans-serif;
 }
 
 body {
@@ -8,7 +8,7 @@ body {
 }
 
 .page-header {
-    background-color: #C25100;
+    background-color: #4682B4;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -56,4 +56,15 @@ h1, h2, h3, h4 {
 
 .comment {
     margin: 20px 0px 20px 20px;
+}
+
+hr {
+    display: block;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+a.logout:link, a.logout:visited, a.logout:hover, a.logout:active {
+    color: white;
 }
