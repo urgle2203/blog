@@ -5,8 +5,13 @@ from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    monthList = []
+    for post in posts:
+        month = str(post.published_date.month).zfill(2) + "-" + str(post.published_date.year)
+        if month not in monthList:
+            monthList.append(month)
+    return render(request, 'blog/post_list.html', {'posts': posts, "months": monthList})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)

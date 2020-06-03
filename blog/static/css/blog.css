@@ -73,3 +73,18 @@ aside {
     float: right;
     background-color: lightgray;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.post-level {
+    padding-left: 10;
+}
